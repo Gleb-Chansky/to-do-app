@@ -8,10 +8,12 @@
     >
     <router-link to="/add" class="header__link"> Add Task</router-link>
   </nav>
+  <PopupComponent />
   <router-view />
 </template>
 
 <script setup>
+import PopupComponent from "./components/PopupComponent.vue";
 import { useStore } from "@/stores/store";
 const store = useStore();
 </script>

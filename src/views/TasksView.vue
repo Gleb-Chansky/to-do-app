@@ -21,10 +21,7 @@
           <button class="task__item-button edit" @click="store.editTask(index)">
             Edit
           </button>
-          <button
-            class="task__item-button delete"
-            @click="store.deleteTask(index)"
-          >
+          <button class="task__item-button delete" @click="store.checkDelete">
             Delete
           </button>
         </div>

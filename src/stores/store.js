@@ -9,6 +9,7 @@ export const useStore = defineStore("store", {
     description: "",
     isEmptyTitle: false,
     isEmptyDescription: false,
+    isVisible: false,
   }),
 
   actions: {
@@ -39,8 +40,12 @@ export const useStore = defineStore("store", {
         this.isEmptyDescription = false;
       }
     },
+    checkDelete() {
+      this.isVisible = true;
+    },
     deleteTask(index) {
       this.tasks.splice(index, 1);
+      this.updateTask();
     },
     editTask(index) {
       this.editedTask = index;
@@ -52,6 +57,9 @@ export const useStore = defineStore("store", {
       this.editedTask = null;
       this.title = "";
       this.description = "";
+      this.isEmptyTitle = false;
+      this.isEmptyDescription = false;
+      this.isVisible = false;
     },
   },
   persist: true,

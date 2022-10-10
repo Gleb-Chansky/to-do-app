@@ -104,26 +104,15 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .home {
-    max-width: 1200px;
-    height: 100%;
-    margin: 0 20px;
-    display: flex;
-    align-items: center;
+    position: relative;
   }
 
   .home__title {
     text-align: center;
     color: #feede1;
     font-weight: 700;
-    font-size: calc(128px + 4vw);
+    font-size: 100px;
     text-transform: uppercase;
-  }
-
-  .invisible {
-    display: none;
   }
 
   .form {
@@ -137,7 +126,7 @@ button:active {
   .form__title {
     color: #dbd1d1;
     padding-bottom: 10px;
-    font-size: calc(10px + 2vw);
+    font-size: 30px;
   }
 
   .form__input {
@@ -145,7 +134,7 @@ button:active {
     padding: 0 0 0 20px;
     border-radius: 7px;
     height: 50px;
-    width: 60vw;
+    width: 75vw;
     background-color: #322531;
     border: none;
     outline: none;
@@ -268,10 +257,6 @@ button:active {
   }
 
   .edit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
     border: 1px solid #4f484e;
     color: #757575;
     transition: 0.2s;
@@ -296,6 +281,75 @@ button:active {
   .red {
     border: 2px solid #960e0e;
   }
+  
+  .popup {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: #09090a78;
+  }
+
+  .popup__inner {
+    position: fixed;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 20px;
+  }
+
+  .popup__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .popup__header-title {
+    font-size: 25px;
+  }
+
+  .popup__header-button {
+    font-size: 25px;
+  }
+
+  .popup__header-button:hover {
+    cursor: pointer;
+  }
+
+  .popup__main {
+    margin-top: 20px;
+  }
+  
+  .popup__main-title {
+    font-size: 20px;
+  }
+
+  .popup__footer {
+    margin-top: 40px;
+    white-space: nowrap;
+  }
+
+  .popup__footer-button {
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.2s;
+    margin-right: 20px;
+  }
+
+  .invisible {
+    display: none;
+  }
+
+  .visible {
+    display: flex !important; 
+  } 
 
   @media (max-width: 1250px) {
     .home {
@@ -323,14 +377,13 @@ button:active {
       font-size: calc(7px + 2vw);
     }
 
-    .form__input {
-      font-size: calc(7px + 2vw);
-      padding-left: 10px;
-      height: 30px;
+    .form__title {
+      font-size: 25px;
     }
 
-    .form__input::placeholder {
-      font-size: calc(7px + 2vw);
+    .form__input {
+      padding-left: 10px;
+      font-size: 15px;
     }
 
     .description {
@@ -354,12 +407,30 @@ button:active {
     }
 
     .task__item-link {
-      width: calc(70px + 5vw);
+      width: calc(85px + 5vw);
       height: calc(10px + 5vw);
       font-size: calc(5px + 2vw);
     }
 
     .task__item-button {
+      width: calc(85px + 5vw);
+      height: calc(10px + 5vw);
+      font-size: calc(5px + 2vw);
+    }
+
+    .popup__header-title {
+    font-size: calc(10px + 2vw);
+    }
+
+    .popup__header-button {
+      font-size: calc(10px + 2vw);
+    }
+
+    .popup__main-title {
+      font-size: calc(8px + 2vw);
+    }
+
+    .popup__footer-button {
       width: calc(85px + 5vw);
       height: calc(10px + 5vw);
       font-size: calc(5px + 2vw);
@@ -380,11 +451,6 @@ button:active {
       display: none;
     }
 
-    .invisible{
-      display: block;
-      max-width: 200px;
-    }
-
     .form {
       padding: 0;
     }
@@ -398,16 +464,47 @@ button:active {
       height: calc(8px + 5vw);
       font-size: calc(3px + 2vw);
     }
+    
+    .popup__inner {
+      padding: 10px;
+      width: 85vw;
+    }
+
+    .popup__footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .popup__footer-button {
+      margin-bottom: 10px;
+    }
   }
 
   @media (max-width:200px) {
-    .invisible {
-      word-wrap:break-word;
-      font-size: calc(20px + 5vw)
-    }
 
     .header__link {
       margin-right: 10px;
       font-size: calc(7px + 2vw)
+    }
+
+    .form__title {
+      font-size: calc(10px + 2vw);
+    }
+
+    .form__input {
+      font-size: calc(8px + 2vw);
+    }
+
+    .popup__main {
+      margin-top: 5px;
+    }
+
+    .popup__footer {
+      margin-top: 10px;
+    }
+
+    hr {
+      display: none;
     }
   }
