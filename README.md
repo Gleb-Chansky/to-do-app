@@ -1,35 +1,10 @@
-# to-do-app
+# To-Do Application
 
-This template should help get you started developing with Vue 3 in Vite.
+With this application, you can make a to-do list.
 
-## Recommended IDE Setup
+When you reload the page or browser, the list of tasks is saved.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+All data is stored in localStorage.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## Online deploying:
+https://gleb-chansky.github.io/to-do-app/
